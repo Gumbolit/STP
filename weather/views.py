@@ -12,7 +12,8 @@ def index(request):
 
     city_info = {
         'city': city,
-        'temp': res["main"]["temp"]
+        'temp': res["main"]["temp"],
+        'icon': res["weather"][0]['icon']
 
     }
     context = {'info': city_info}
