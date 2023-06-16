@@ -6,3 +6,5 @@ class City(models.Model):
     def __srt__(self):
         return self.name
 # Create your models here.
+
+
