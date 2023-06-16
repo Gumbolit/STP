@@ -18,7 +18,9 @@
     </div>
       <h1>Создать прогулку</h1>
 <form method="post">
-  <input type="text" placeholder="Введите название" class="form-control">
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.time }}<br>
   <button type="submit" class="btn btn-success">Добавить</button>
 </form>
 </body>

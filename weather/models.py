@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class City(models.Model):
     name = models.CharField(max_length=30)
 
@@ -9,8 +10,8 @@ class City(models.Model):
 
 
 class UserEvent(models.Model):
-     title = models.CharField(max_length=50)
-     time = models.DateTimeField
+    title = models.CharField(max_length=50)
+    time = models.CharField(max_length=50)
 
-     def __srt__(self):
+    def __srt__(self):
         return self.title
