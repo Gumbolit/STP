@@ -26,3 +26,7 @@ def index(request):
     context = {'all_info': all_cities}
 
     return render(request, 'weather/index.html', context)
+
+
+def create(request):
+    return render(request, 'weather/create_event.html')

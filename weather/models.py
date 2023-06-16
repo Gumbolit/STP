@@ -8,3 +8,9 @@ class City(models.Model):
 # Create your models here.
 
 
+class UserEvent(models.Model):
+     title = models.CharField(max_length=50)
+     time = models.DateTimeField
+
+     def __srt__(self):
+        return self.title
