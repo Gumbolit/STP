@@ -9,9 +9,16 @@ def index(request):
     url = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=' + appid
 
     if(request.method == 'POST'):
-        form = CitiForm(request.POST)
-        form.save()
-
+        submit_button = request.POST.get('send')
+        if(submit_button == 'append'):
+            form = CitiForm(request.POST)
+            form.save()
+        if(submit_button == 'delet'):
+            try:
+                City.objects.get(name=request.POST['name']).delete()
+            except City.MultipleObjectsReturned:
+                city = City.objects.filter(name=request.POST['name']).order_by('id').last().delete()
+                print(city)
 
     form=CitiForm()
 

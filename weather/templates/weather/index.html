@@ -22,11 +22,14 @@
         <h1>Погода в вашем городе</h1>
         <form action="" method="post">
                      {%  csrf_token  %}
-
             {{ form.name }}
-            <input type="submit" name="send" value="Узнать" class="mt-1 btn btn-danger">
-            <input type="submit" name="delet" value="Удалить" class="mt-1 btn btn-danger">
+            <input type="submit" name="send" value="append" class="mt-1 btn btn-success" >
+            <input type="submit" name="send" value="delet" class="mt-1 btn btn-danger" >
+
         </form>
+
+
+
     </div>
         <div class="col-4 offset-2">
         <h1>Информация</h1>
